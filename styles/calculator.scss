@@ -1,0 +1,205 @@
+.keyPlus {grid-area: plus; height: 50px; background-color: #eeeeee; border-right: 1px solid black; border-bottom: 1px solid black}
+.keyMinus {grid-area: minus; height: 50px; background-color: #eeeeee; border-right: 1px solid black; border-bottom: 1px solid black}
+.keyPer {grid-area: per; height: 50px; background-color: #eeeeee; border-bottom: 1px solid black}
+.keyDivide {grid-area: divide; height: 50px; background-color: #eeeeee; border-bottom: 1px solid black; border-left: 1px solid black}
+
+.key7 {grid-area: seven; height: 50px; background-color: #ffffff; border-right: 2px solid #f5f0e8; border-bottom: 2px solid #f5f0e8}
+.key8 {grid-area: eight; height: 50px; background-color: #ffffff; border-right: 2px solid #f5f0e8; border-bottom: 2px solid #f5f0e8}
+.key9 {grid-area: nine; height: 50px; background-color: #ffffff; border-bottom: 2px solid #f5f0e8}
+
+.key4 {grid-area: four; height: 50px; background-color: #ffffff; border-right: 2px solid #f5f0e8; border-bottom: 2px solid #f5f0e8}
+.key5 {grid-area: five; height: 50px; background-color: #ffffff; border-right: 2px solid #f5f0e8; border-bottom: 2px solid #f5f0e8}
+.key6 {grid-area: six; height: 50px; background-color: #ffffff; border-bottom: 2px solid #f5f0e8}
+
+.key1 {grid-area: one; height: 50px; background-color: #ffffff; border-bottom: 2px solid #f5f0e8; border-right: 2px solid #f5f0e8}
+.key2 {grid-area: two; height: 50px; background-color: #ffffff; border-bottom: 2px solid #f5f0e8; border-right: 2px solid #f5f0e8}
+.key3 {grid-area: three; height: 50px; background-color: #ffffff; border-bottom: 2px solid #f5f0e8;}
+
+.key0 {grid-area: zero; height: 50px; background-color: #ffffff; border-radius: 0 0 0 5px; border-right: 2px solid #f5f0e8}
+.keyPoint {grid-area: point; height: 50px; background-color: #ffffff; border-right: 2px solid #f5f0e8}
+.keyAC {grid-area: ac; height: 50px; background-color: #ffffff}
+
+.keyEqual {
+  grid-area: equal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fa8f18;
+  border-radius: 0 0 5px 0;
+  border-left: 1px solid black;
+}
+
+.calculator_keys {
+  display: grid;
+
+  grid-template-areas:"display display display display"
+  "plus minus per divide"
+  "seven eight nine equal"
+  "four five six equal"
+  "one two three equal"
+  "zero point ac equal" ;
+  grid-template-rows: 1fr 50px;
+  grid-template-columns: 105px 105px 105px 1fr;
+  font-size: 28px;
+
+
+
+}
+
+
+.calculator {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.calculator_display {
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 40px;
+  color: white;
+  background-color: black;
+
+}
+
+
+.html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.body {
+  margin: 0;
+  font: 100 14px 'Roboto';
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
+}
+
+#wrapper {
+  height: 60vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 320px;
+  height: 520px;
+  position: relative;
+}
+
+.calculator {
+  width: 100%;
+  height: 100%;
+  background: black;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper .calculator {
+  box-shadow: 0px 0px 20px 0px #aaa;
+}
+
+.calculator-display {
+  color: white;
+  background: #1c191c;
+  line-height: 130px;
+  font-size: 6em;
+
+  flex: 1;
+}
+
+.auto-scaling-text {
+  display: inline-block;
+}
+
+.calculator-display .auto-scaling-text {
+  padding: 0 30px;
+  position: absolute;
+  right: 0;
+  transform-origin: right;
+}
+
+.calculator-keypad {
+  height: 400px;
+
+  display: flex;
+}
+
+.calculator .input-keys {
+  width: 240px;
+}
+
+.calculator .function-keys {
+  display: flex;
+}
+
+.calculator .digit-keys {
+  background: #e0e0e7;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.calculator-key {
+  width: 80px;
+  height: 80px;
+  border-top: 1px solid #777;
+  border-right: 1px solid #666;
+  text-align: center;
+  line-height: 80px;
+}
+.calculator .function-keys .calculator-key {
+  font-size: 2em;
+}
+.calculator .function-keys .key-multiply {
+  line-height: 50px;
+}
+.calculator .digit-keys .calculator-key {
+  font-size: 2.25em;
+}
+.calculator .digit-keys .key-0 {
+  width: 160px;
+  text-align: left;
+  padding-left: 32px;
+}
+.calculator .digit-keys .key-dot {
+  padding-top: 1em;
+  font-size: 0.75em;
+}
+.calculator .operator-keys .calculator-key {
+  color: white;
+  border-right: 0;
+  font-size: 3em;
+}
+
+.calculator .function-keys {
+  background: linear-gradient(to bottom, rgba(202,202,204,1) 0%, rgba(196,194,204,1) 100%);
+}
+.calculator .operator-keys {
+  background:  linear-gradient(to bottom, rgba(252,156,23,1) 0%, rgba(247,126,27,1) 100%);
+}
